@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: learning-management-system
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Lalit Raghav
+Implementation-Vendor-Id: com.lms
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://spring.io/projects/spring-boot/learning-ma
+ nagement-system
+Created-By: Maven Integration for Eclipse
+
