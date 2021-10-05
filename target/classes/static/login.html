@@ -133,22 +133,27 @@
 		$(document).delegate('#login', 'click', function (event) {
 			event.preventDefault();
 
-			var username = $('#unamename').val();
+			var username = $('#username').val();
 			var password = $('#password').val();
 
 
 			$.ajax({
 				type: "POST",
 				contentType: "application/json; charset=utf-8",
-				url: "http://localhost:8084/api/login",
+				url: "http://localhost:8084/api/login/{login}/{password}",
 				//headers: {"Authorization": localStorage.setItem('Authorization',token)},
 				data: JSON.stringify({'username': username, 'password': password}),
 				cache: false,
 				success: function (result) {
-						top.location.href = "welcome.html";
+					if(result=="login successfully")
+						{
+						localStorage.setItem('Authorization',token);
+						window.location.href = "welcome.html";
+						}
+						
 						},
 				error: function (err)
-				top.location.href = "login.html";
+				window.location.href = "login.html";
 			}
 			});
 		});

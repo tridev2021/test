@@ -42,7 +42,7 @@
 		}
 	</style> 
 	<script type="text/javascript">
-	/*
+	
 		$(document).ready(function() {
 			$.getJSON('http://localhost:8084/avi/getdata', function(json) {
 				var tr=[];
@@ -87,14 +87,14 @@
 					}
 				});
 			});
-		/*
+		
 			$(document).delegate('.delete', 'click', function() { 
 				if (confirm('Do you really want to delete record?')) {
 					var id = $(this).attr('id');
 					var parent = $(this).parent().parent();
 					$.ajax({
 						type: "DELETE",
-						url: "http://localhost:8084/avi/c1/Customerbean/" + id,
+						url: "http://localhost:8084/api/Delete" + id,
 						cache: false,
 						success: function() {
 							parent.fadeOut('slow', function() {
@@ -111,7 +111,7 @@
 				}
 			});
 			
-			$(document).delegate('.edit', 'click', function() {
+			 /* $(document).delegate('.edit', 'click', function() {
 				var parent = $(this).parent().parent();
 				
 				var id = parent.children("td:nth-child(1)");
