@@ -1,0 +1,7 @@
+your client id
+
+1066206658782-51ns6kvqlj4kfare45uh05nth3nsnrok.apps.googleusercontent.com
+
+your Client Secret
+
+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
